@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "af58d14b-5333-486e-99a6-64a0323b0127",
+		"name": "promotion-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add user promotion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MDUzMTc2OTIsInVzZXJfaWQiOjF9.ovTXoPCqUacyFErHYk661LT4D3WQzoNgmDtDj9wFw7o"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "localhost:8080/users-promotion/user1-promotion1"
+			},
+			"response": []
+		},
+		{
+			"name": "create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\"     : \"user 1\",\n    \"email\"    : \"user1@domain.com\",\n    \"password\" : \"user1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/users"
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\"    : \"user1@domain.com\",\n    \"password\" : \"user2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/login"
+			},
+			"response": []
+		},
+		{
+			"name": "update user ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MDUzMTcwNjIsInVzZXJfaWQiOjF9.TScBySd-Oh194e9a-MFJ5_HtQicZdO02pgVkxsme36U"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\"     : \"user 2\",\n    \"email\"    : \"user1@domain.com\",\n    \"password\" : \"user2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MDMzMzEzNTcsInVzZXJfaWQiOjR9.G7YZDmY1nlJ6KE5EKCodRbNOEuWlcJUXZGlPbEMBR3s"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/users/4"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
